@@ -96,6 +96,10 @@ if os.name == "posix":
 else:
     raise Exception, "os not supported"
 
+# pgplot locations from macports
+library_dirs.append("/opt/local/lib")
+include_dirs.append("/opt/local/include")
+
 ext_ppgplot = make_extension(name+'._ppgplot',
 			[os.path.join('src', '_ppgplot.c')],
 			include_dirs=include_dirs,
