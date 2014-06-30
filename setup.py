@@ -8,10 +8,10 @@ import sys
 
 define_macros = []
 undef_macros = []
-include_dirs = []
+include_dirs = ["/opt/local/include"]
 extra_compile_args = []
 libraries = ["cpgplot", "pgplot"]
-library_dirs = []
+library_dirs = ["/opt/local/lib"]
 name = "ppgplot"
 
 found_module = False
@@ -95,10 +95,6 @@ if os.name == "posix":
         print >>sys.stderr, "PGPLOT_DIR env var not defined!"
 else:
     raise Exception, "os not supported"
-
-# pgplot locations from macports
-library_dirs.append("/opt/local/lib")
-include_dirs.append("/opt/local/include")
 
 ext_ppgplot = make_extension(name+'._ppgplot',
 			[os.path.join('src', '_ppgplot.c')],
