@@ -82,6 +82,7 @@ if os.name == "posix":
     # comment out g2c if compiling with gfortran (typical nowadays)
     # you may still need this if using an earlier fortran compiler
     # libraries.append("g2c")
+    libraries.append("gfortran")
     library_dirs.append("/usr/X11R6/lib/")
     if os.environ.has_key("PGPLOT_DIR"):
         library_dirs.append(os.environ["PGPLOT_DIR"])
