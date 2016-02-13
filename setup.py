@@ -11,7 +11,7 @@ undef_macros = []
 include_dirs = ["/opt/local/include"]
 extra_compile_args = []
 libraries = ["cpgplot", "pgplot"]
-library_dirs = ["/opt/local/lib"]
+library_dirs = ["/opt/local/lib", "/opt/local/lib/gcc49"]
 name = "ppgplot"
 
 found_module = False
